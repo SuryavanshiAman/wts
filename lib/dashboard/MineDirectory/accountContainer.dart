@@ -52,7 +52,7 @@ class _Account_ContState extends State<Account_Cont> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text("Total earning : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
-                  Text("Team income : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
+                  // Text("Team income : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text('Income today : ', style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text("Project : ",  style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text("Recharge : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
@@ -73,9 +73,9 @@ class _Account_ContState extends State<Account_Cont> {
                       // widget.earns["totalearning"].toString(),
                       style: rs0,
                     ),
-                     Text(widget.earns["teamEarning"]==null?"0.0":
-                     "₹${double.parse(widget.earns["teamEarning"
-                         ]).toStringAsFixed(2)}", style: rs0),
+                     // Text(widget.earns["teamEarning"]==null?"0.0":
+                     // "₹${double.parse(widget.earns["teamEarning"
+                     //     ]).toStringAsFixed(2)}", style: rs0),
                      Text(widget.earns["todayEarning"]==null?"0.0":
                      "₹${double.parse(widget.earns["todayEarning"
                          ]).toStringAsFixed(2)}", style: rs0),

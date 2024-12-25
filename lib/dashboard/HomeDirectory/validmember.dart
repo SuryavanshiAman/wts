@@ -88,9 +88,7 @@ class _Valid_MemberState extends State<Valid_Member> {
                               width: 100,
                               color: _selectedCategoryIndex == index ? lightBlue : Colors.white,
 
-                              child: Center(child: Text('${snapshot.data![index].lavelStage}'+'-'''
-                                  '${snapshot.data![index].commission}'+'%'+"("'${snapshot.data![index].count??0}'
-                                  +")",
+                              child: Center(child: Text('${snapshot.data![index].lavelStage}'"("'${snapshot.data![index].count??0}'")",
                                 style: lv1,)),
                             ),
                           );
