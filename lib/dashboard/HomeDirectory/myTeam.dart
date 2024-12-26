@@ -67,9 +67,9 @@ class _MyTeamState extends State<MyTeam> with TickerProviderStateMixin{
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: lightBlue,
 
-                  tabs: const [
+                  tabs:  [
                     Tab(
-                      text: ("Invalid Member"),
+                      text: ("All Member"),
                     ),
                     // Tab(
                     //   text: ("ONCOMING"),

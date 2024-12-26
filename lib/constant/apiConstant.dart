@@ -43,4 +43,5 @@ class ApiConst{
   static const String aboutUs= "${baseUrl}aboutus";
   static const String qrAddress= "${baseUrl}get_usdt_qr_addresses";
   static const String usdt= "${baseUrl}addusdtaddress";
+  static const String teamLevel= "${baseUrl}get_user_levels?userid=";
 }
