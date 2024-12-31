@@ -2,6 +2,7 @@
 class ApiConst{
   // static const String baseUrl="https://admin.sbmpro.live/Api/";
   static const String baseUrl="https://root.worldtradeshiping.co.in/Api/";
+  static const String salaryDistributeBaseUrl="https://root.worldtradeshiping.co.in/api/";
   static const String loginUrl= "${baseUrl}password_login";
   static const String registerUrl= "${baseUrl}register";
   static const String profileView= "${baseUrl}user_profile?id=";
@@ -44,4 +45,6 @@ class ApiConst{
   static const String qrAddress= "${baseUrl}get_usdt_qr_addresses";
   static const String usdt= "${baseUrl}addusdtaddress";
   static const String teamLevel= "${baseUrl}get_user_levels?userid=";
+  static const String salaryDistribute= "${salaryDistributeBaseUrl}salry.php?userid=";
+  static const String getSalary= "${baseUrl}get_salary_history?userid=";
 }

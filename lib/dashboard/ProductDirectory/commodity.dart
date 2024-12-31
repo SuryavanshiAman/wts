@@ -60,7 +60,7 @@ class _CommodityState extends State<Commodity> {
                       "No Diamond ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.sp,
+                        fontSize: 25,
                         color: black,
                       ),
                     ),

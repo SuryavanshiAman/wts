@@ -62,7 +62,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
             title: Text('Privacy Policy',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
-                fontSize: 20.sp,
+                fontSize: 20,
                 color: black,
               ), ),
 

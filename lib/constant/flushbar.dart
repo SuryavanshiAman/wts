@@ -174,7 +174,7 @@ class Utils {
                   child: Text(
                     'Your recharge has been \n   done successfully',
                     style: TextStyle(
-                        fontSize: 15.sp,
+                        fontSize: 15,
                         fontWeight: FontWeight.w900,
                         color: black),
                   ),
@@ -183,7 +183,7 @@ class Utils {
                 Text(
                   'If any Payment related support  :',
                   style: TextStyle(
-                      fontSize: 10.sp,
+                      fontSize: 10,
                       fontWeight: FontWeight.w500,
                       color: black),
                 ),
@@ -195,7 +195,7 @@ class Utils {
                     'Whatsapp Link',
                     style: TextStyle(
                         decoration: TextDecoration.underline,
-                        fontSize: 10.sp,
+                        fontSize: 10,
                         fontWeight: FontWeight.w500,
                         color: black),
                   ),
@@ -255,7 +255,7 @@ class Utils {
                     'Telegram Link',
                     style: TextStyle(
                         decoration: TextDecoration.underline,
-                        fontSize: 8.sp,
+                        fontSize: 8,
                         fontWeight: FontWeight.w500,
                         color: black),
                   ),

@@ -104,7 +104,11 @@ class _DetailsPageState extends State<DetailsPage> {
                     double.parse(map['wallet']).toStringAsFixed(2),style: ConstText,),
                   subtitle:    const Text("Wallet"),
                   trailing:  CustomButton(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(context,
+                            MaterialPageRoute(
+                                builder: (context)=>const RechargeAmount()));
+                      },
                       width: width*0.3,
                       text: "Recharge"
                   )

@@ -60,7 +60,7 @@ class _EquityState extends State<Equity> {
                       "No Stack1",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 25.sp,
+                          fontSize: 25,
                           color: black,
                       ),
                     ),

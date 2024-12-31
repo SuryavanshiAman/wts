@@ -136,7 +136,7 @@ class _WithdrawPageState extends State<WithdrawPage> {
         title: Text(
           'WITHDRAWL',
           style: TextStyle(
-              fontSize: 20.sp, fontWeight: FontWeight.w900, color: black),
+              fontSize: 20, fontWeight: FontWeight.w900, color: black),
         ),
         actions: [
           TextButton(
@@ -146,7 +146,7 @@ class _WithdrawPageState extends State<WithdrawPage> {
               },
               child: Text('History',
                   style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: 14,
                       fontWeight: FontWeight.w900,
                       color: black)))
         ],

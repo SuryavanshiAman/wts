@@ -440,7 +440,7 @@ class _Elements_contState extends State<Elements_cont> {
 
                               ),
 
-                              Text('Are you Sure?',style: TextStyle(fontSize: 40.sp,fontWeight: FontWeight.w900),),
+                              Text('Are you Sure?',style: TextStyle(fontSize: 40,fontWeight: FontWeight.w900),),
                               const Spacer(),
 
 

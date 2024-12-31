@@ -55,7 +55,7 @@ class _RedeemedPageState extends State<RedeemedPage> {
                       "No data available",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.sp,
+                        fontSize: 25,
                         color: black,
                       ),
                     ),

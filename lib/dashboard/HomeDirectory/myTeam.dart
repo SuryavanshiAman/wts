@@ -41,7 +41,7 @@ class _MyTeamState extends State<MyTeam> with TickerProviderStateMixin{
         title: Text('MY TEAM',
           style: TextStyle(
             fontWeight: FontWeight.w900,
-            fontSize: 20.sp,
+            fontSize: 20,
             color: black,
           ), ),
 

@@ -49,7 +49,7 @@ class _Bonus_RecordState extends State<Bonus_Record> {
           title: Text('BONUS RECORD',
             style: TextStyle(
               fontWeight: FontWeight.w900,
-              fontSize: 20.sp,
+              fontSize: 20,
               color: black,
             ), )
       ),
@@ -87,7 +87,7 @@ class _Bonus_RecordState extends State<Bonus_Record> {
                         "No Bonus History",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 25.sp,
+                          fontSize: 25,
                           color: black,
                         ),
                       ),
@@ -104,12 +104,12 @@ class _Bonus_RecordState extends State<Bonus_Record> {
                       return  Card(elevation: 3,
                           child: ListTile(
                             title: Text('CODE.: '+'${snapshot.data![index].code}',
-                                style: TextStyle(fontSize: 14.sp,
+                                style: TextStyle(fontSize: 14,
                                     fontWeight: FontWeight.w900)),
                             subtitle: Text('${snapshot.data![index].created_at}'),
                             trailing:  Text('₹ '+'${snapshot.data![index].amount}',
                                 style: TextStyle(
-                                    fontSize: 12.sp,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w900)
                             ),
                           )

@@ -55,7 +55,7 @@ class _View_all_team_commissionState extends State<View_all_team_commission> {
         title: Text('COMMISSION RECORD',
           style: TextStyle(
             fontWeight: FontWeight.w900,
-            fontSize: 20.sp,
+            fontSize: 20,
             color: black,
           ), ),
 
@@ -94,7 +94,7 @@ class _View_all_team_commissionState extends State<View_all_team_commission> {
                           "No Data Avilable",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 15.sp,
+                            fontSize: 15,
                             color: black,
                           ),
                         ),
@@ -160,7 +160,7 @@ class _View_all_team_commissionState extends State<View_all_team_commission> {
                             "No Data Avilable",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 15.sp,
+                              fontSize: 15,
                               color: black,
                             ),
                           ),

@@ -63,12 +63,12 @@ class _bottomState extends State<bottom> {
           ),
           shadowColor: Colors.black,
           title: Text('Are you sure?', style: TextStyle(
-            fontSize: 15.sp,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
             color: black,
           ),),
           content: Text('Do you want to exit from App', style: TextStyle(
-            fontSize: 15.sp,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
             color: black,
           ),),

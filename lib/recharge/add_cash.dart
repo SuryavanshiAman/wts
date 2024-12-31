@@ -173,7 +173,7 @@ class _addcashState extends State<addcash> {
         Container(
           child: Center(child: Text("PAY USING",
             style: TextStyle(
-                fontSize: 20.sp,
+                fontSize: 20,
                 color: Colors.black,
                 fontWeight: FontWeight.w900
 

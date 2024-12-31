@@ -30,6 +30,7 @@ class _HomeState extends State<Home> {
     SupportApi.fetchdata();
     referEarn();
     viewProfile();
+
     super.initState();
   }
 
@@ -205,8 +206,25 @@ class _HomeState extends State<Home> {
       print(data);
       setState(() {
         userData = data['data'];
+
       });
+      salaryDistribute();
     }
   }
-
+  Future<void> salaryDistribute() async {
+    try {
+      final response = await http.get(
+        Uri.parse("${ApiConst.salaryDistribute}${userData['id']}"),
+      );
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        print("SalaryDistribute: $data");
+      } else {
+        print("Error: Received status code ${response.statusCode}");
+        print("Response body: ${response.body}");
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
 }

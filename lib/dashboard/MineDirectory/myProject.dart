@@ -44,7 +44,7 @@ class _MyProjectPageState extends State<MyProjectPage>with TickerProviderStateMi
         title: Text('MY PROJECT',
           style: TextStyle(
           fontWeight: FontWeight.w900,
-          fontSize: 20.sp,
+          fontSize: 20,
           color: black,
         ), ),
 

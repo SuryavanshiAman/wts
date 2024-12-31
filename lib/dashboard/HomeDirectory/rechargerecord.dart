@@ -53,7 +53,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
           title: Text('DEPOSIT HISTORY',
             style: TextStyle(
               fontWeight: FontWeight.w900,
-              fontSize: 20.sp,
+              fontSize: 20,
               color: black,
             ), )
       ),
@@ -91,7 +91,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                         "No Deposit History",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 25.sp,
+                          fontSize: 25,
                           color: black,
                         ),
                       ),
@@ -108,7 +108,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                       return  Card(elevation: 3,
                           child: ListTile(
                             title: Text('ORDER NO.: '+'${snapshot.data![index].orderNumber}',
-                                style: TextStyle(fontSize: 14.sp,
+                                style: TextStyle(fontSize: 14,
                                     fontWeight: FontWeight.w900)),
                             subtitle: Text('${snapshot.data![index].createdAt}'),
                             trailing: Column(
@@ -117,7 +117,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                                 Text(
                                     snapshot.data![index].type=='1'?  '₹ '+'${snapshot.data![index].amount}':'\$ '+'${snapshot.data![index].amount}',
                                     style: TextStyle(
-                                        fontSize: 12.sp,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w900)
                                 ),
                                 snapshot.data![index].status=='0'?
@@ -129,7 +129,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                                       borderRadius: BorderRadius.circular(5)
                                   ),
                                   child:Center(child: Text('PENDING',
-                                    style: TextStyle(fontSize: 10.sp,fontWeight: FontWeight.w900,color: white),)),
+                                    style: TextStyle(fontSize: 10,fontWeight: FontWeight.w900,color: white),)),
                                 )
                                     :snapshot.data![index].status=='1'
                                     ?Container(
@@ -140,7 +140,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                                       borderRadius: BorderRadius.circular(5)
                                   ),
                                   child:Center(child: Text('SUCCESS',
-                                    style: TextStyle(fontSize: 10.sp,fontWeight: FontWeight.w900,color: white),)),
+                                    style: TextStyle(fontSize: 10,fontWeight: FontWeight.w900,color: white),)),
                                 ):Container(
                                   height: 20.h,
                                   width: 70.w,
@@ -149,7 +149,7 @@ WidgetsBinding.instance.addPostFrameCallback((_){
                                       borderRadius: BorderRadius.circular(5)
                                   ),
                                   child:Center(child: Text('FAILED',
-                                    style: TextStyle(fontSize: 10.sp,fontWeight: FontWeight.w900,color: white),)),
+                                    style: TextStyle(fontSize: 10,fontWeight: FontWeight.w900,color: white),)),
                                 )
                               ],
                             ),

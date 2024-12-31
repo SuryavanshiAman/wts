@@ -6,7 +6,7 @@
 // import 'package:wts/constant/textStyleConstant.dart';
 // import 'package:wts/dashboard/HomeDirectory/bonusrecord.dart';
 // import 'package:wts/main.dart';
-// import 'package:wts/model.dart';
+// import 'package:wts/team_model.dart';
 // import 'package:wts/product/ProductController/teamcommission_controller.dart';
 // import 'package:wts/product/homedcontroller/commissioncontrolletr.dart';
 // import 'package:wts/product/homedcontroller/invalidmyteamcontroller.dart';
@@ -195,16 +195,11 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:wts/constant/constantColor.dart';
 import 'package:wts/constant/textStyleConstant.dart';
-import 'package:wts/dashboard/HomeDirectory/bonusrecord.dart';
 import 'package:wts/main.dart';
-import 'package:wts/model.dart';
-import 'package:wts/product/ProductController/teamcommission_controller.dart';
-import 'package:wts/product/homedcontroller/commissioncontrolletr.dart';
-import 'package:wts/product/homedcontroller/validmyteamcontroller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:wts/model/team_model.dart';
 
 import '../../constant/apiConstant.dart';
 
@@ -269,7 +264,7 @@ class _Invalid_MemberState extends State<Invalid_Member> with TickerProviderStat
                   alignment: Alignment.center,
                   width: 80,
                   child: Text(
-                    "mobile.no".toUpperCase(),
+                    "UserID".toUpperCase(),
                     style: gridText,
                   )),
               Container(
@@ -311,7 +306,7 @@ class _Invalid_MemberState extends State<Invalid_Member> with TickerProviderStat
                               SizedBox(
                                   width: 85,
                                   child: Text(
-                                    '${userData?.mobile}',
+                                    '${userData?.userids}',
                                     style: lv1,
                                   )),
                               Container(

@@ -39,33 +39,53 @@ class _MyAppState extends State<MyApp> {
           width = MediaQuery.of(context).size.width > 500
               ? 500
               : MediaQuery.of(context).size.width;
-          return MaterialApp(
-            builder: (context, child) {
-              return Center(
-                child: Container(
-                  constraints: BoxConstraints(
-                    maxWidth: width,
-                  ),
-                  child: child,
+          return ScreenUtilInit(
+            designSize: const Size(360, 690),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (context , child) {
+              return MaterialApp(
+                builder: (context, child) {
+                  return Center(
+                    child: Container(
+                      constraints: BoxConstraints(
+                        maxWidth: width,
+                      ),
+                      child: child,
+                    ),
+                  );
+                },
+                title: "WTS",
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
                 ),
+                debugShowCheckedModeBanner: false,
+                home:child
               );
             },
-            title: "WTS",
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            debugShowCheckedModeBanner: false,
-            home:SplashScreen(),
+
+            child: SplashScreen(),
           );
+
         } else {
-          return MaterialApp(
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            title: "WTS",
-            debugShowCheckedModeBanner: false,
-            home: SplashScreen(),
+          return ScreenUtilInit(
+            designSize: const Size(360, 690),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (context , child) {
+              return  MaterialApp(
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
+                ),
+                title: "WTS",
+                debugShowCheckedModeBanner: false,
+                home: child,
+              );
+            },
+
+            child: SplashScreen(),
           );
+
         }
       },
     );

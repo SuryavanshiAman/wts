@@ -60,7 +60,7 @@ class _BackgroundDesignState extends State<BackgroundDesign> {
               title: Text(
                 'Are you sure?',
                 style: TextStyle(
-                  fontSize: 15.sp,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: black,
                 ),
@@ -68,7 +68,7 @@ class _BackgroundDesignState extends State<BackgroundDesign> {
               content: Text(
                 'Do you want to exit from App',
                 style: TextStyle(
-                  fontSize: 15.sp,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: black,
                 ),
