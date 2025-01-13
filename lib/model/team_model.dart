@@ -102,12 +102,12 @@ class Data {
 }
 
 class Users {
-  String? id;
-  String? userids;
-  String? datetime;
-  String? mobile;
-  int? level;
-  int? totalPurchase;
+  dynamic id;
+  dynamic userids;
+  dynamic datetime;
+  dynamic mobile;
+  dynamic level;
+  dynamic totalPurchase;
 
   Users(
       {this.id,

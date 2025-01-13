@@ -3,16 +3,15 @@ import 'dart:convert';
 import 'package:wts/Widgets/rectanglebutton.dart';
 import 'package:wts/buttonconstant/buttonConstant';
 import 'package:wts/constant/apiConstant.dart';
-import 'package:wts/constant/assetsConstant.dart';
 import 'package:wts/constant/constantColor.dart';
 import 'package:wts/constant/flushbar.dart';
 import 'package:wts/constant/textStyleConstant.dart';
 import 'package:wts/dashboard/HomeDirectory/bonusrecord.dart';
-import 'package:wts/dashboard/HomeDirectory/withdrawlrecord.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart'as http;
+import 'package:wts/generated/assets.dart';
 
 class Bonus_Page extends StatefulWidget {
   const Bonus_Page({Key? key}) : super(key: key);
@@ -36,7 +35,7 @@ class _Bonus_PageState extends State<Bonus_Page> {
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           flexibleSpace: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20)),
@@ -48,7 +47,7 @@ class _Bonus_PageState extends State<Bonus_Page> {
               )
           ),
           automaticallyImplyLeading: false,
-          leading: CustomBackButton(),
+          leading: const CustomBackButton(),
           centerTitle: true,
           title: Text('BONUS',
             style: TextStyle(
@@ -60,9 +59,9 @@ class _Bonus_PageState extends State<Bonus_Page> {
           TextButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Bonus_Record()));
+                    MaterialPageRoute(builder: (context) => const Bonus_Record()));
               },
-              child: Text('Record',
+              child: Text('Bonus History',
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w900,
@@ -72,21 +71,21 @@ class _Bonus_PageState extends State<Bonus_Page> {
       body: Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(image: DecorationImage(image:AssetImage(bgImage),
+        decoration: BoxDecoration(
+          color: lightBlue.withOpacity(0.08),
+            image: const DecorationImage(image:AssetImage(Assets.imagesBonusBg),
         fit: BoxFit.cover
         )),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-            SizedBox(height: height*0.08,),
+            SizedBox(height: height*0.13,),
             Text("Bonus Code",style:bonusSty ,),
-            SizedBox(height: height*0.05,),
-
+            SizedBox(height: height*0.03,),
             TextField(
               controller: bonusController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border:   OutlineInputBorder(),
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(

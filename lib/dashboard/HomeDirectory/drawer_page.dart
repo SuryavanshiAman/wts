@@ -26,6 +26,8 @@ import 'package:wts/recharge/rechargeAmount.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
+import 'bonus.dart';
+
 class DrawerPage extends StatefulWidget {
   const DrawerPage({super.key});
 
@@ -243,6 +245,17 @@ class _DrawerPageState extends State<DrawerPage> {
                   ),
                   title: Text(
                     'Salary',
+                    style: TextStyle(fontSize: height / 45),
+                  ),
+                ),
+                ListTile(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const Bonus_Page()));                  },
+                  leading: Image.asset(bonus,
+                    height: 25,
+                  ),
+                  title: Text(
+                    'Bonus',
                     style: TextStyle(fontSize: height / 45),
                   ),
                 ),

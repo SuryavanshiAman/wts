@@ -108,7 +108,7 @@ class _LoginState extends State<Login> {
               }else{
                 login(nameController.text,passController.text);
               }
-              }, text: 'Sign In',):
+              }, text: 'Sign *In',):
             const CircularButton(),
             SizedBox(height: height*0.01,),
             Row(
@@ -161,6 +161,7 @@ class _LoginState extends State<Login> {
     );
   }
   login(String nameController,String passController)async {
+    print("🤡🤡🤡");
     setState(() {
        loading=true;
     });

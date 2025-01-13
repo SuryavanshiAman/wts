@@ -6,6 +6,7 @@ import 'package:wts/constant/constantColor.dart';
 import 'package:wts/constant/constantButton.dart';
 import 'package:wts/constant/textStyleConstant.dart';
 import 'package:wts/dashboard/MineDirectory/myprojectview.dart';
+import 'package:wts/main.dart';
 import 'package:wts/product/ProductController/bonuscontroller.dart';
 import 'package:wts/product/homedcontroller/withdrawlcontroller.dart';
 import 'package:flutter/material.dart';
@@ -25,14 +26,12 @@ class _Bonus_RecordState extends State<Bonus_Record> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
      
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           flexibleSpace: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20)),
@@ -44,9 +43,9 @@ class _Bonus_RecordState extends State<Bonus_Record> {
               )
           ),
           automaticallyImplyLeading: false,
-          leading: CustomBackButton(),
+          leading: const CustomBackButton(),
           centerTitle: true,
-          title: Text('BONUS RECORD',
+          title: const Text('BONUS RECORD',
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 20,
@@ -59,7 +58,7 @@ class _Bonus_RecordState extends State<Bonus_Record> {
             future: qwe(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               }
@@ -83,7 +82,7 @@ class _Bonus_RecordState extends State<Bonus_Record> {
                             )
                         ),
                       ),
-                      Text(
+                      const Text(
                         "No Bonus History",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -104,11 +103,11 @@ class _Bonus_RecordState extends State<Bonus_Record> {
                       return  Card(elevation: 3,
                           child: ListTile(
                             title: Text('CODE.: '+'${snapshot.data![index].code}',
-                                style: TextStyle(fontSize: 14,
+                                style: const TextStyle(fontSize: 14,
                                     fontWeight: FontWeight.w900)),
                             subtitle: Text('${snapshot.data![index].created_at}'),
                             trailing:  Text('₹ '+'${snapshot.data![index].amount}',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w900)
                             ),
