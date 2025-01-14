@@ -32,7 +32,7 @@ class _WithdrawPageState extends State<WithdrawPage> {
   int _selectedItemIndex = 10; // Initialize with a value that won't match any index
   bool _isButtonEnabled = false;
   String type = "1";
-  List<int> usdAmount = [100, 500, 1000,1500, 2000, 5000, 50000];
+  List<int> usdAmount = [10, 500, 1000,1500, 2000, 5000, 50000];
   List<int> indianAmount = [300, 500, 1000, 2000, 5000, 10000, 49999];
   void _handleTextChange() {
     setState(() {

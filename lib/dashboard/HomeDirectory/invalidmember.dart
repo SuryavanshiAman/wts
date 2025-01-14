@@ -354,6 +354,7 @@ class _Invalid_MemberState extends State<Invalid_Member> with TickerProviderStat
       final List<dynamic> responseData = json.decode(response.body)['data'];
       setState(() {
         teamList = responseData.map((item) => Data.fromJson(item)).toList();
+        print("😊😊😊$responseData");
         // Initialize TabController once data is fetched
         tabController = TabController(length: teamList.length, vsync: this);
       });
