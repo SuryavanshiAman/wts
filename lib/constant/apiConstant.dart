@@ -47,4 +47,5 @@ class ApiConst{
   static const String teamLevel= "${baseUrl}get_user_levels?userid=";
   static const String salaryDistribute= "${salaryDistributeBaseUrl}salry.php?userid=";
   static const String getSalary= "${baseUrl}get_salary_history?userid=";
+  static const String notification= "${baseUrl}send_notifications";
 }

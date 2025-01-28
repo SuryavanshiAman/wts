@@ -54,6 +54,7 @@ class _Account_ContState extends State<Account_Cont> {
                   Text("Total earning : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   // Text("Team income : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text('Income today : ', style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
+                  Text('Salary : ', style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text("Project : ",  style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text("Recharge : ", style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
                   Text('Withdraws : ', style: TextStyle(color: black,fontWeight: FontWeight.w600,fontSize: 18)),
@@ -66,43 +67,15 @@ class _Account_ContState extends State<Account_Cont> {
                   crossAxisAlignment: CrossAxisAlignment.start,
 
                   children: [
-                    Text(
-             widget.earns["totalearning"]
-                      ==null?"0.0":"₹${double.parse(widget.earns["totalearning"
-                      ]).toStringAsFixed(2)}",
-                      // widget.earns["totalearning"].toString(),
-                      style: rs0,
-                    ),
-                     // Text(widget.earns["teamEarning"]==null?"0.0":
-                     // "₹${double.parse(widget.earns["teamEarning"
-                     //     ]).toStringAsFixed(2)}", style: rs0),
-                     Text(widget.earns["todayEarning"]==null?"0.0":
-                     "₹${double.parse(widget.earns["todayEarning"
-                         ]).toStringAsFixed(2)}", style: rs0),
-                    Text(widget.earns["project"]==null?"0.0":
-                    "₹${double.parse(widget.earns["project"]).toStringAsFixed(2)}", style: rs0),
-                    Text(widget.earns["recharge"]==null?"0.0":
-                    "₹${double.parse(widget.earns["recharge"]).toStringAsFixed(2)}", style: rs0),
-                    Text(widget.earns["withdraw"]== null?"0.0":
-                   "₹${double.parse(widget.earns["withdraw"]).toStringAsFixed(2)}", style: rs0),
+                    Text(widget.earns["totalearning"] ==null?"0.0":"₹${double.parse(widget.earns["totalearning"]).toStringAsFixed(2)}", style: rs0),
+                     Text(widget.earns["todayEarning"]==null?"0.0": "₹${double.parse(widget.earns["todayEarning"]).toStringAsFixed(2)}", style: rs0),
+                     Text(widget.earns["todayEarning"]==null?"0.0": "₹${double.parse(widget.earns["todayEarning"]).toStringAsFixed(2)}", style: rs0),
+                    Text(widget.earns["project"]==null?"0.0": "₹${double.parse(widget.earns["project"]).toStringAsFixed(2)}", style: rs0),
+                    Text(widget.earns["recharge"]==null?"0.0": "₹${double.parse(widget.earns["recharge"]).toStringAsFixed(2)}", style: rs0),
+                    Text(widget.earns["withdraw"]== null?"0.0": "₹${double.parse(widget.earns["withdraw"]).toStringAsFixed(2)}", style: rs0),
                   ],
                 ),
               ),
-              // SizedBox(
-              //   height: height * 0.03,
-              // ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //
-              //   ],
-              // ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //
-              //   ],
-              // ),
             ],
           ),
         ),

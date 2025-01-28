@@ -96,7 +96,7 @@ class _RechargeAmountState extends State<RechargeAmount> {
       10; // Initialize with a value that won't match any index
   bool _isButtonEnabled = false;
   List<int> indianAmount = [10000, 50000, 100000, 200000, 500000, 5000000];
-  List<int> usdAmount = [100, 500, 1000, 2000, 5000, 50000];
+  List<int> usdAmount = [10, 500, 1000, 2000, 5000, 50000];
   void _handleTextChange() {
     setState(() {
       _selectedItemIndex = 10; // Reset selected index
@@ -211,13 +211,6 @@ class _RechargeAmountState extends State<RechargeAmount> {
                                 image: const DecorationImage(image: AssetImage(Assets.imagesUpi)),
                                 borderRadius: BorderRadius.circular(18),
                                 border: Border.all(color: bgColor)),
-                            // child: const Text(
-                            //   "INR",
-                            //   style: TextStyle(
-                            //       color: textGray,
-                            //       fontWeight: FontWeight.w600,
-                            //       fontSize: 18),
-                            // ),
                           ),
                         ),
                       ),

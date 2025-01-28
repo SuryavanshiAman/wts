@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:convert';
+import 'package:wts/auth/backgroundDesign.dart';
 import 'package:wts/constant/apiConstant.dart';
 import 'package:wts/constant/assetsConstant.dart';
 import 'package:wts/constant/constantColor.dart';
@@ -8,6 +9,7 @@ import 'package:wts/dashboard/HomeDirectory/drawer_page.dart';
 import 'package:wts/dashboard/HomeDirectory/slider.dart';
 import 'package:wts/dashboard/ProductDirectory/commodity.dart';
 import 'package:wts/dashboard/ProductDirectory/equity.dart';
+import 'package:wts/generated/assets.dart';
 import 'package:wts/main.dart';
 import 'package:wts/support_api.dart';
 import 'package:flutter/foundation.dart';
@@ -30,7 +32,7 @@ class _HomeState extends State<Home> {
     SupportApi.fetchdata();
     referEarn();
     viewProfile();
-
+    notification();
     super.initState();
   }
 
@@ -195,6 +197,7 @@ class _HomeState extends State<Home> {
 
 
   var userData;
+  var notificationText;
   viewProfile() async {
     final prefs = await SharedPreferences.getInstance();
     final userid = prefs.getString("userId");
@@ -218,6 +221,86 @@ class _HomeState extends State<Home> {
       );
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
+        print("SalaryDistribute: $data");
+      } else {
+        print("Error: Received status code ${response.statusCode}");
+        print("Response body: ${response.body}");
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+  Future<void> notification() async {
+    try {
+      final response = await http.get(
+        Uri.parse(ApiConst.notification),
+      );
+      if (response.statusCode == 200) {
+
+        final data = jsonDecode(response.body);
+        print("Aman:$data");
+        if(data['success']==true){
+          setState(() {
+            notificationText=data['data']['description'];
+          });
+          print("Aman:$notificationText");
+          showDialog(
+              barrierColor: Colors.transparent,
+              context: context,
+              builder: (context) => AlertDialog(
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(20))),
+                backgroundColor: lightBlue,
+                content: Container(
+                  height: height *0.4,
+                  width: width*0.7,
+                  decoration: BoxDecoration(
+                      borderRadius:
+                      BorderRadius.circular(30)),
+                  child:  Column(
+                    mainAxisAlignment:
+                    MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Notification!',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: white,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      Text(
+                        notificationText,
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: white,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              color:bgColor ,
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(20))
+                          ),
+                          child: Text(
+                            'OK',
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: white,
+                                fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ));
+        }
         print("SalaryDistribute: $data");
       } else {
         print("Error: Received status code ${response.statusCode}");

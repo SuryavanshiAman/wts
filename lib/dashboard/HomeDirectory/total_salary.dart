@@ -63,33 +63,30 @@ class _TotalSalaryPageState extends State<TotalSalaryPage> {
         itemCount: salary.length,
         itemBuilder: (context, index) {
           final item = salary[index];
-          return  Center(child: Padding(
-            padding:  EdgeInsets.only(top: height*0.25),
-            child: Text("No Data Available",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w600),),
-          ));
-          //   Container(
-          //   padding: EdgeInsets.all(5),
-          //     // margin: EdgeInsets.only(top: height*0.25),
-          //   decoration: BoxDecoration(
-          //     // color: Colors.red
-          //     // border: Border(bottom: BorderSide(color: gray))
-          //   ),
-          //   child:
-          //   ListTile(
-          //     title: Text(
-          //       "Salary",
-          //       style: TextStyle(fontWeight: FontWeight.bold),
-          //     ),
-          //     subtitle: Text("Date: ${item.datetime}",),
-          //     trailing: Text(
-          //       "+₹${item.amount}",
-          //       style: TextStyle(
-          //         color: Colors.green,
-          //         fontWeight: FontWeight.bold,
-          //       ),
-          //     ),
-          //   ),
-          // );
+          return
+            Container(
+            padding: EdgeInsets.all(5),
+              // margin: EdgeInsets.only(top: height*0.25),
+            decoration: BoxDecoration(
+              // color: Colors.red
+              // border: Border(bottom: BorderSide(color: gray))
+            ),
+            child:
+            ListTile(
+              title: Text(
+                "Salary",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text("Date: ${item.datetime}",),
+              trailing: Text(
+                "+₹${item.amount}",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          );
         },
       ):Center(child: Padding(
       padding:  EdgeInsets.only(top: height*0.25),
