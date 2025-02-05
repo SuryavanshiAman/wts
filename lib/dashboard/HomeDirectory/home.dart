@@ -211,7 +211,7 @@ class _HomeState extends State<Home> {
         userData = data['data'];
 
       });
-      salaryDistribute();
+      // salaryDistribute();
     }
   }
   Future<void> salaryDistribute() async {

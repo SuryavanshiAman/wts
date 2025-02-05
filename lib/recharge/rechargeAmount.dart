@@ -62,11 +62,31 @@ class _RechargeAmountState extends State<RechargeAmount> {
             Utils.flushBarErrorMessage(
                 "Please Upload Image", context, Colors.white);
           }
-          else if (int.parse(amount.text) >= int.parse("100")) {
-            addmony(context, amount.text, map['userids']);
-          } else {
+          else if (type=="1") {
+            if(int.parse(amount.text) >= int.parse("100")){
+              addmony(context, amount.text, map['userids']);
+            }else{
+              Utils.flushBarErrorMessage(
+                  "Minimum Recharge amount is 100", context, Colors.white);
+            }
+
+          }  else if (type=="2"){
+            if(int.parse(amount.text) >= int.parse("10")){
+              addmony(context, amount.text, map['userids']);
+            }else{
+              Utils.flushBarErrorMessage(
+                  "Minimum Recharge amount is \$10", context, Colors.white);
+            }
+
+          }
+          else {
+            if(type=="1"){
             Utils.flushBarErrorMessage(
-                "Minimum Recharge amount is 100", context, Colors.white);
+                "Minimum Recharge amount is 100", context, Colors.white);}
+            else{
+              Utils.flushBarErrorMessage(
+                  "Minimum Recharge amount is \$10", context, Colors.white);
+            }
           }
         },
         text: "Add Cash");

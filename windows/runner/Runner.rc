@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.sbm_pro.game" "\0"
-            VALUE "FileDescription", "sbm_pro" "\0"
+            VALUE "CompanyName", "com.WTS.game" "\0"
+            VALUE "FileDescription", "WTS" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "sbm_pro" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.sbm_pro.game. All rights reserved." "\0"
-            VALUE "OriginalFilename", "sbm_pro.exe" "\0"
-            VALUE "ProductName", "sbm_pro" "\0"
+            VALUE "InternalName", "WTS" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.WTS.game. All rights reserved." "\0"
+            VALUE "OriginalFilename", "WTS.exe" "\0"
+            VALUE "ProductName", "WTS" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
