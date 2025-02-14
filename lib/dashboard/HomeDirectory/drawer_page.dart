@@ -304,8 +304,7 @@ class _DrawerPageState extends State<DrawerPage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                             const ReferEarn()));
-                  },
+                             const ReferEarn()));},
                   leading: Image.asset(
                     Assets.imagesInvite,
                     height: 25,
